@@ -36,7 +36,10 @@ jobs:
 
       # 6️⃣ Terraform Apply
       - name: Terraform Apply
-        run: terraform apply -auto-approve
+        env:
+          TF_VAR_bucket_name: rohit-cloud-resume-terraform-tf
+        run: terraform apply -auto-approve -input=false
+
 
       # 7️⃣ Upload website to S3
       - name: Upload website to S3
