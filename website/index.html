@@ -1,23 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Rohit Karki | Cloud Resume</title>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohit Karki | Cloud & Systems Engineer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!---->
+
 </head>
 <body>
-  <h1>Hello 👋 I’m Rohit</h1>
-  <p>This resume is deployed using AWS + Terraform. lets go buddy...</p>
+<header>
+     <!-- Visitor Counter (Top-right, non-sticky) -->
+  <div class="visitor-counter">
+    <i class="fa-solid fa-eye"></i>
+  <span id="count">Loading...</span>
 
- <h3>fuck you Visitor Count1: <span id="count">Loading...</span></h3>
+  </div>
+  <h1>Rohit Karki</h1>
+  <p class="role">
+    Registered Engineer (NEC) | AWS Certified Solutions Architect – Associate
+  </p>
+  <p class="contact">
+    📍 Bagdole-4, Lalitpur, Nepal |
+    📞 9808943655 |
+    ✉️ <a href="mailto:rohitkarki483@gmail.com">rohitkarki483@gmail.com</a>
+ <br>
+    🔗 <a href="https://www.linkedin.com/in/rohitkarki483/" target="_blank">LinkedIn</a> |
+    💻 <a href="https://github.com/rohitkarki483" target="_blank">GitHub</a>
+  </p>
+</header>
 
-<script>
-  fetch("__API_URL__/count")
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById("count").innerText = data.count;
-    })
-    .catch(() => {
-      document.getElementById("count").innerText = "Error";
-    });
-</script>
+<section>
+  <h2>Professional Summary</h2>
+  <p>
+    AWS Certified Solutions Architect – Associate and motivated Computer Engineer with hands-on
+    experience in system & network monitoring, Linux administration, and L1 technical support
+    within an ISP environment. Strong foundation in networking, server operations, and AWS cloud
+    services (EC2, VPC, S3, IAM). Experienced in monitoring large-scale infrastructure,
+    troubleshooting network and system issues, and supporting end users.
+  </p>
+</section>
 
+<section>
+  <h2>Experience</h2>
+
+  <h3>System & Network Monitoring Engineer</h3>
+  <p class="company">Vianet Communication Pvt. Ltd. | Oct 2025 – Present</p>
+  <ul>
+    <li>Monitored servers, networks, and user systems to ensure high availability and performance.</li>
+    <li>Used Zabbix, Grafana, LibreNMS, Checkmk, and Smokeping for monitoring and alert analysis.</li>
+    <li>Proactively identified incidents and escalated issues to NetOps and System teams.</li>
+    <li>Assisted in troubleshooting fiber links, routers, ONUs, latency, and packet loss issues.</li>
+  </ul>
+
+  <h3>Support Associate Expert</h3>
+  <p class="company">Vianet Communication Pvt. Ltd. | Dec 2023 – Oct 2024</p>
+  <ul>
+    <li>Provided first-level technical support for FTTH and SOHO customers.</li>
+    <li>Diagnosed and resolved internet and network connectivity issues.</li>
+    <li>Performed remote troubleshooting and ticket handling using support tools.</li>
+    <li>Coordinated with field and technical teams for onsite resolution and service upgrades.</li>
+  </ul>
+
+  <h3>Linux System Administration</h3>
+  <ul>
+    <li>Worked with Linux (Ubuntu) in server and lab environments.</li>
+    <li>User & group management, file permissions, and package management.</li>
+    <li>Managed NGINX services and accessed systems securely via SSH.</li>
+    <li>Analyzed logs and system resource utilization.</li>
+  </ul>
+
+  <h3>Content Creator & Educator</h3>
+  <p class="company">Delta Gamma Academy | Feb 2022 – Present</p>
+  <ul>
+    <li>Created and managed an educational YouTube channel for IOE entrance preparation.</li>
+    <li>Mentored students by simplifying technical concepts and exam strategies.</li>
+  </ul>
+
+  <h3>President – Robotics Club</h3>
+  <p class="company">National College of Engineering | Jan 2023 – Jan 2025</p>
+  <ul>
+    <li>Led and managed the college robotics club.</li>
+    <li>Organized robotics workshops, competitions, and technical events.</li>
+    <li>Represented the club in inter-college and external robotics programs.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Education</h2>
+
+  <p>
+    <strong>Bachelor of Engineering in Electronics, Communication & Information Engineering</strong><br>
+    National College of Engineering, Lalitpur <br>
+    <em>Mar 2021 – Apr 2025</em>
+  </p>
+
+  <p>
+    <strong>+2 Science Stream</strong><br>
+    D.A.V College, Lalitpur <br>
+    <em>Mar 2019 – Feb 2021</em>
+  </p>
+
+  <p>
+    <strong>S.E.E</strong><br>
+    Annapurna High School, Lalitpur <br>
+    <em>Mar 2007 – Mar 2018</em>
+  </p>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <h3>AWS EC2 Web Hosting with NGINX</h3>
+  <ul>
+    <li>Deployed a static website on AWS EC2 using NGINX.</li>
+    <li>Managed Linux-based EC2 instances via SSH.</li>
+    <li>Configured AWS Security Groups to allow controlled public access.</li>
+    <li><a href="https://github.com/rohitkarki483/OTT-Platform" target="_blank">GitHub Repository</a></li>
+  </ul>
+
+  <h3>Network Topology Case Study</h3>
+  <ul>
+    <li>Designed and configured a campus network topology.</li>
+    <li>Implemented VLANs, ACLs, static and dynamic routing.</li>
+    <li>Configured DHCP, DNS, HTTP, and Mail servers.</li>
+  </ul>
+
+  <h3>Library Management System</h3>
+  <ul>
+    <li>Python–MySQL based library management system.</li>
+    <li>Inventory, borrowing/return records, and user management.</li>
+  </ul>
+
+  <h3>Detection of Shoplifting Using Computer Vision</h3>
+  <ul>
+    <li>YOLOv8-Nano and ConvLSTM based real-time detection system.</li>
+    <li>Processed surveillance video feeds.</li>
+    <li>Achieved 89% accuracy.</li>
+  </ul>
+
+  <h3>Plant Stress Monitoring Using LIG Sensor</h3>
+  <ul>
+    <li>Laser-Induced Graphene based plant stress monitoring system.</li>
+    <li>Arduino-based signal generation and mobile app integration.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Certifications & Licenses</h2>
+  <ul>
+    <li>
+      <strong>Registered Engineer (Electronics & Communication)</strong><br>
+      Nepal Engineering Council (NEC) – Licensed Engineer
+    </li>
+    <li>
+      <strong>AWS Certified Solutions Architect – Associate (SAA-C03)</strong>
+    </li>
+    <li>
+      Data Science with Python – Tech Axis
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>Awards</h2>
+  <p>
+    <strong>Outstanding Performer – 2024</strong><br>
+    Vianet Communication Pvt. Ltd.
+  </p>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <ul class="skills">
+    <li>Linux</li>
+    <li>AWS</li>
+    <li>EC2</li>
+    <li>S3</li>
+    <li>VPC</li>
+    <li>IAM</li>
+    <li>NGINX</li>
+    <li>Networking</li>
+    <li>Zabbix</li>
+    <li>Grafana</li>
+    <li>Python</li>
+    <li>Git</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Languages</h2>
+  <p>Nepali | English | Hindi</p>
+  
+</section>
+
+<footer>
+  <p>© 2026 Rohit Karki</p>
+</footer>
+
+</body>
+</html>
