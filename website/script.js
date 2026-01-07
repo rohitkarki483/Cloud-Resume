@@ -18,7 +18,7 @@ sections.forEach(section => {
 
 console.log("script.js loaded");
 
-const apiUrl = "https://xt5bcv5qa9.execute-api.us-east-1.amazonaws.com/count";
+const apiUrl = "https://kpfnhs946c.execute-api.us-east-1.amazonaws.com/count";
 
 fetch(apiUrl)
   .then(response => response.json())
