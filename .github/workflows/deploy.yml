@@ -1,4 +1,4 @@
-name: Cloud Resume CI/CD
+name: Deploy Cloud Resume
 
 on:
   push:
@@ -10,11 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repository
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2️⃣ Configure AWS credentials
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -22,33 +20,15 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      # 3️⃣ Setup Terraform
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3
-
-      # 4️⃣ Terraform Init
-      - name: Terraform Init
-        run: terraform init
-
-      # 5️⃣ Terraform Validate
-      - name: Terraform Validate
-        run: terraform validate
-
-      # 6️⃣ Terraform Apply
-      - name: Terraform Apply
-        env:
-          TF_VAR_bucket_name: rohit-cloud-resume-terraform-tf
-        run: terraform apply -auto-approve -input=false
-
-
-      # 7️⃣ Upload website to S3
-      - name: Upload website to S3
+      - name: Upload files to S3
         run: |
-          aws s3 sync website/ s3://rohit-cloud-resume-terraform-tf --delete
+          aws s3 sync . s3://${{ secrets.S3_BUCKET }} \
+            --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*"
 
-      # 8️⃣ Invalidate CloudFront cache
-      - name: Invalidate CloudFront
+      - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id E21O80AQ2UPNLB \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
             --paths "/*"
