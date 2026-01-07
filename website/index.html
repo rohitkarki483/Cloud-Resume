@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rohit Karki | Cloud Resume</title>
+  <meta charset="utf-8" />
+</head>
+<body>
+  <h1>Hello 👋 I’m Rohit</h1>
+  <p>This resume is deployed using AWS + Terraform. lets go buddy...</p>
+
+ <h3>fuck you Visitor Count: <span id="count">Loading...</span></h3>
+
+<script>
+  fetch("__API_URL__/count")
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("count").innerText = data.count;
+    })
+    .catch(() => {
+      document.getElementById("count").innerText = "Error";
+    });
+</script>
+
