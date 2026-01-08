@@ -13,7 +13,7 @@ This project focuses on real-world architecture, security best practices, and au
 
 ---
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 The application follows a serverless, highly available, and globally distributed architecture.
 ![Architecture Diagram](Images/architecture.png)
