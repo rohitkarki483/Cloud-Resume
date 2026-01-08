@@ -90,6 +90,8 @@ This ensures consistent, repeatable, and error-free deployments without manual i
 - No AWS credentials are exposed in frontend code.
 - Secrets are stored securely in GitHub repository secrets.
 
+---
+
 ## Project Structure
 
 ```text
