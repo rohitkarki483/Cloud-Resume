@@ -1,8 +1,10 @@
 # Terraform
 .terraform/
-terraform.tfstate
-terraform.tfstate.backup
-*.tfvars
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/*.tfvars
+terraform/**/windows_386/
 
 # AWS
 .aws/

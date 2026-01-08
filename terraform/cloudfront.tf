@@ -15,7 +15,6 @@ resource "aws_cloudfront_distribution" "resume" {
     domain_name              = aws_s3_bucket.resume.bucket_regional_domain_name
     origin_id                = "s3-resume-origin"
     origin_access_control_id = aws_cloudfront_origin_access_control.resume_oac.id
-    origin_path = "/website"
   }
 
   default_cache_behavior {
