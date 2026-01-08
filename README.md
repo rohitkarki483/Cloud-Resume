@@ -82,7 +82,7 @@ This ensures consistent, repeatable, and error-free deployments without manual i
 
 ---
 
-### Security Design
+## Security Design
 
 - S3 bucket blocks all public access.
 - CloudFront is the only service allowed to access S3.
@@ -104,7 +104,7 @@ cloud-resume/
 ├── .gitignore
 └── README.md
 ```
-### Key Learnings
+## Key Learnings
 
 - Understanding CloudFront caching behavior and invalidation strategies.
 - Secure serverless backend design.
